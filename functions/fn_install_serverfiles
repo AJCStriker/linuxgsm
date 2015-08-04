@@ -77,12 +77,5 @@ fn_steaminstallcommand
 if [ -z "${autoinstall}" ]; then
 	echo ""
 	echo "================================="
-	while true; do
-	read -p "Was the install successful? [y/N]" yn
-		case $yn in
-			[Yy]* ) break;;
-			[Nn]* ) fn_install_retry;;
-			* ) echo "Please answer yes or no.";;
-		esac
-	done
+	
 fi
